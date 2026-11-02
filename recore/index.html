@@ -134,6 +134,14 @@ ul.clean li{margin:4px 0}
 .case .video:hover{border-color:var(--accent)}
 .case .video .pl{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-size:11px}
 .case .video small{display:block;color:var(--ink-3)}
+.yt{margin:14px 0 0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface-2)}
+.yt-play,.yt iframe{display:block;width:100%;aspect-ratio:16/9;border:0;padding:0;margin:0;background:#000;position:relative;cursor:pointer}
+.yt-play img{width:100%;height:100%;object-fit:cover;display:block;opacity:.88;transition:opacity .2s}
+.yt-play:hover img{opacity:1}
+.yt-btn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:64px;height:44px;border-radius:12px;background:#e62117;color:#fff;display:grid;place-items:center;font-size:18px;box-shadow:0 4px 14px rgba(0,0,0,.35)}
+.yt figcaption{padding:10px 14px 12px;font-size:14px;display:grid;gap:2px}
+.yt figcaption span{color:var(--ink-2);font-size:13px}
+.yt figcaption a{font-size:12px;color:var(--ink-3)}
 .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;vertical-align:middle;margin-left:6px}
 .badge.v{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
 .badge.u{background:var(--accent-soft);color:var(--accent)}
@@ -408,7 +416,7 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
           <dt>성과</dt><dd>작은 구역에 리노베이션이 몰리며 우오마치 긴텐가이와 뒷골목 통행량이 늘었고, 활기가 돌아온 뒤 임대료가 크게 올랐습니다. 리노베이션 스쿨은 이후 일본 전역으로 퍼진 ‘리노베이션 마치즈쿠리’의 원형이 됐습니다.</dd>
         </dl>
         <div class="lesson"><b>RE:CORE 적용</b> — 활성화상가를 공공이 직접 운영하기보다 민간 운영사가 서브리스하는 구조로 설계하고, 사업 초기에 ‘리노베이션 스쿨’형 창업자 발굴 프로그램을 넣습니다.</div>
-        <a class="video" href="https://www.youtube.com/watch?v=LeVOSvBzMag" target="_blank" rel="noopener"><span class="pl">▶</span><span>【リノベ祭り 2016 春】ぼくらのリノベーションまちづくり — 嶋田洋平<small>리노베이션 스쿨을 이끈 시마다 요헤이의 강연. 빈 점포를 지역 자산과 연결해 사업으로 정착시키는 방법</small></span></a>
+        <figure class="yt"><button type="button" class="yt-play" data-id="LeVOSvBzMag" aria-label="영상 재생: 【リノベ祭り 2016 春】ぼくらのリノベーションまちづくり — 嶋田洋平"><img src="https://i.ytimg.com/vi/LeVOSvBzMag/hqdefault.jpg" alt="" loading="lazy"><span class="yt-btn" aria-hidden="true">▶</span></button><figcaption><b>【リノベ祭り 2016 春】ぼくらのリノベーションまちづくり — 嶋田洋平</b><span>리노베이션 스쿨을 이끈 시마다 요헤이의 강연. 빈 점포를 지역 자산과 연결해 사업으로 정착시키는 방법</span><a href="https://www.youtube.com/watch?v=LeVOSvBzMag" target="_blank" rel="noopener">YouTube에서 보기 ↗</a></figcaption></figure>
         <div class="src">출처: <a href="https://www.mlit.go.jp/toshi/townscape/content/001913939.pdf" target="_blank" rel="noopener">국토교통성</a> · <a href="https://www.chusho.meti.go.jp/keiei/sapoin/monozukuri300sha/shoutengai30/2014/S26.pdf" target="_blank" rel="noopener">중소기업청</a> · <a href="https://data-max.co.jp/article/14267" target="_blank" rel="noopener">Data Max</a></div>
       </article>
 
@@ -421,7 +429,7 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
           <dt>성과</dt><dd>2006년 A블록 준공 뒤 통행량이 약 2배로 늘었습니다. 지대·임대료가 운영회사 실적에 연동돼 매년 바뀌므로 지주도 위험을 함께 집니다.</dd>
         </dl>
         <div class="lesson"><b>RE:CORE 적용</b> — 흩어진 공실 상가를 ‘매입’만으로 모으기는 어렵습니다. 장기임차와 매출 연동 임대료로 건물주를 사업 파트너로 끌어들이는 계약 모델을 함께 설계합니다.</div>
-        <a class="video" href="https://www.youtube.com/watch?v=5BtSbrgEBgw" target="_blank" rel="noopener"><span class="pl">▶</span><span>【日本一の商店街】元々の店を廃業して成功した「丸亀町商店街」<small>상인들이 토지 권리를 일원화해 교외 쇼핑몰과의 경쟁에서 역전한 개발 구조</small></span></a>
+        <figure class="yt"><button type="button" class="yt-play" data-id="5BtSbrgEBgw" aria-label="영상 재생: 【日本一の商店街】元々の店を廃業して成功した「丸亀町商店街」"><img src="https://i.ytimg.com/vi/5BtSbrgEBgw/hqdefault.jpg" alt="" loading="lazy"><span class="yt-btn" aria-hidden="true">▶</span></button><figcaption><b>【日本一の商店街】元々の店を廃業して成功した「丸亀町商店街」</b><span>상인들이 토지 권리를 일원화해 교외 쇼핑몰과의 경쟁에서 역전한 개발 구조</span><a href="https://www.youtube.com/watch?v=5BtSbrgEBgw" target="_blank" rel="noopener">YouTube에서 보기 ↗</a></figcaption></figure>
         <div class="src">출처: <a href="https://www.chisou.go.jp/tiiki/chukatu/jirei/takamatsu.pdf" target="_blank" rel="noopener">내각부 지방창생추진사무국</a> · <a href="https://www.jri.co.jp/page.jsp?id=6906" target="_blank" rel="noopener">일본종합연구소</a></div>
       </article>
 
@@ -479,7 +487,7 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
           <dt>성과</dt><dd>NPO가 직접 손댄 빈집이 100채 가까이 됩니다(2016년 무렵 NPO 자체 집계). 경사지 골목의 오래된 집을 게스트하우스·카페·공방으로 바꿔 이주자와 창업자를 불러들였습니다.</dd>
         </dl>
         <div class="lesson"><b>RE:CORE 적용</b> — 지역 자원(자전거길)에서 뽑은 콘텐츠 하나를 특화거점의 정체성으로 삼고, 빈 점포 매칭은 행정(심사·계약)과 민간(홍보·상담·사후관리)이 나눠 맡습니다. 공실 DB만으로는 작동하지 않고 현장 매칭 조직이 필요합니다.</div>
-        <a class="video" href="https://www.youtube.com/watch?v=TDrUGso40b4" target="_blank" rel="noopener"><span class="pl">▶</span><span>トークイベント／尾道式 空き家再生術 (2023.11.12)<small>빈집을 청년 창작자 거점으로 바꿔 온 실제 과정과 커뮤니티 정착 모델</small></span></a>
+        <figure class="yt"><button type="button" class="yt-play" data-id="TDrUGso40b4" aria-label="영상 재생: トークイベント／尾道式 空き家再生術 (2023.11.12)"><img src="https://i.ytimg.com/vi/TDrUGso40b4/hqdefault.jpg" alt="" loading="lazy"><span class="yt-btn" aria-hidden="true">▶</span></button><figcaption><b>トークイベント／尾道式 空き家再生術 (2023.11.12)</b><span>빈집을 청년 창작자 거점으로 바꿔 온 실제 과정과 커뮤니티 정착 모델</span><a href="https://www.youtube.com/watch?v=TDrUGso40b4" target="_blank" rel="noopener">YouTube에서 보기 ↗</a></figcaption></figure>
         <div class="src">출처: <a href="https://onomichi-u2.com/en/about/" target="_blank" rel="noopener">ONOMICHI U2</a> · <a href="https://www.mlit.go.jp/tagengo-db/common/001554812.pdf" target="_blank" rel="noopener">국토교통성</a> · <a href="https://www.mlit.go.jp/common/000998358.pdf" target="_blank" rel="noopener">국토교통성(빈집뱅크)</a> · <a href="https://camp-fire.jp/projects/3881/activities/12110" target="_blank" rel="noopener">NPO CAMPFIRE</a></div>
       </article>
 
@@ -502,7 +510,7 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
           <dt>성과</dt><dd>16개 사 안팎이 사무실을 열었고, 2011년 1970년 이후 처음으로 전입이 전출을 넘었습니다(4년간 64세대 102명 이주, 총무성 자료).</dd>
         </dl>
         <div class="lesson"><b>RE:CORE 적용</b> — 원도심 공실을 상점으로만 채우려 하지 말고, 위성 오피스·공유 오피스로 ‘낮 시간 상주 인구’를 만들면 주변 음식점·소매가 따라옵니다. 수도권 기업 유치와 연계할 수 있습니다.</div>
-        <a class="video" href="https://www.youtube.com/watch?v=jrAimKjYaE4" target="_blank" rel="noopener"><span class="pl">▶</span><span>가미야마정 위성 오피스 참고 영상<small>IT 위성 오피스와 청년 정주 사례</small></span></a>
+        <figure class="yt"><button type="button" class="yt-play" data-id="jrAimKjYaE4" aria-label="영상 재생: 가미야마정 위성 오피스 참고 영상"><img src="https://i.ytimg.com/vi/jrAimKjYaE4/hqdefault.jpg" alt="" loading="lazy"><span class="yt-btn" aria-hidden="true">▶</span></button><figcaption><b>가미야마정 위성 오피스 참고 영상</b><span>IT 위성 오피스와 청년 정주 사례</span><a href="https://www.youtube.com/watch?v=jrAimKjYaE4" target="_blank" rel="noopener">YouTube에서 보기 ↗</a></figcaption></figure>
         <div class="src">출처: <a href="https://www.soumu.go.jp/main_content/000336906.pdf" target="_blank" rel="noopener">총무성</a> · <a href="https://www.soumu.go.jp/main_sosiki/joho_tsusin/top/local_support/ict/jirei/2017_073.html" target="_blank" rel="noopener">총무성 ICT 사례</a> · <a href="https://forbesjapan.com/articles/detail/6093" target="_blank" rel="noopener">Forbes Japan</a></div>
       </article>
 
@@ -703,6 +711,12 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
     try{localStorage.setItem('recore-check',JSON.stringify([].map.call(boxes,function(b){return b.checked})));}catch(e){}}
   try{var saved=JSON.parse(localStorage.getItem('recore-check')||'[]');boxes.forEach(function(b,i){b.checked=!!saved[i]});}catch(e){}
   boxes.forEach(function(b){b.addEventListener('change',upd)}); upd();
+  document.querySelectorAll('.yt-play').forEach(function(b){b.addEventListener('click',function(){
+    var f=document.createElement('iframe');
+    f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&rel=0';
+    f.title=b.getAttribute('aria-label');f.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';f.allowFullscreen=true;
+    b.replaceWith(f);
+  })});
 })();
 </script>
 </body>
