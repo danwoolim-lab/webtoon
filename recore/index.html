@@ -130,6 +130,22 @@ ul.clean li{margin:4px 0}
 .case .src{margin-top:12px;font-size:12px;color:var(--ink-3)}
 .case .src a{color:var(--ink-3)}
 .case[hidden]{display:none}
+.case .video{margin-top:12px;display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:12px;text-decoration:none;font-size:14px;background:var(--surface-2)}
+.case .video:hover{border-color:var(--accent)}
+.case .video .pl{flex:none;width:28px;height:28px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:flex;align-items:center;justify-content:center;font-size:11px}
+.case .video small{display:block;color:var(--ink-3)}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;vertical-align:middle;margin-left:6px}
+.badge.v{background:color-mix(in srgb,var(--ok) 16%,transparent);color:var(--ok)}
+.badge.u{background:var(--accent-soft);color:var(--accent)}
+.req{display:grid;gap:16px}
+@media(min-width:860px){.req{grid-template-columns:repeat(3,1fr)}}
+.req .card h3{font-size:17px}
+.core3{display:grid;gap:16px;margin-bottom:28px}
+@media(min-width:860px){.core3{grid-template-columns:repeat(3,1fr)}}
+.core3 .card{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.core3 .card .k{font-family:"Noto Serif KR",serif;font-weight:900;font-size:40px;color:var(--accent);line-height:1}
+.core3 .card h3{color:var(--bg);margin-top:10px}
+.core3 .card p{color:color-mix(in srgb,var(--bg) 78%,transparent);margin:0;font-size:15px}
 
 /* table */
 .tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
@@ -194,11 +210,11 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
   <div class="wrap">
     <span class="eyebrow">원도심 거점특화 시범사업 · 2027 착수</span>
     <h1>비어가는 원도심,<br><span class="re">RE:CORE</span>로 다시 채운다</h1>
-    <p class="lede">국토교통부·문화체육관광부·중소벤처기업부가 함께 추진하는 ‘원도심 리코어(RE:CORE) 프로젝트’. 공실 상가와 유휴 공공시설(공간·HW)에 청년·문화·창업 콘텐츠(SW)를 함께 넣어 지방 원도심의 핵심 기능을 되살리는 사업입니다. 이 사이트는 사업 내용을 정리하고, 같은 문제를 먼저 겪은 일본의 원도심·상점가 재생 사례 8곳에서 설계에 쓸 수 있는 교훈을 뽑았습니다.</p>
+    <p class="lede">국토교통부·문화체육관광부·중소벤처기업부가 함께 추진하는 ‘원도심 리코어(RE:CORE) 프로젝트’. 공실 상가와 유휴 공공시설(공간·HW)에 청년·문화·창업 콘텐츠(SW)를 함께 넣어 지방 원도심의 핵심 기능을 되살리는 사업입니다. 이 사이트는 사업 내용을 정리하고, 같은 문제를 먼저 겪은 일본의 원도심·상점가 재생 사례 9곳에서 설계에 쓸 수 있는 교훈을 뽑았습니다.</p>
     <div class="kpis">
       <div class="kpi"><div class="n">242.4<small>억 원</small></div><div class="l">지역당 국비 상한 (4년)</div></div>
       <div class="kpi"><div class="n">365<small>억 원</small></div><div class="l">지방비 포함 총사업비 상한</div></div>
-      <div class="kpi"><div class="n">1–2<small>곳</small></div><div class="l">비수도권 권역(4극3특)별 우선 선정</div></div>
+      <div class="kpi"><div class="n">7<small>곳+</small></div><div class="l">비수도권 4극3특 권역별 1곳 이상 우선 선정</div></div>
       <div class="kpi"><div class="n">2029</div><div class="l">권역별 2–3곳으로 확대 목표</div></div>
     </div>
   </div>
@@ -212,7 +228,7 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
     <div class="sec-head">
       <span class="sec-num">01 — 사업 개요</span>
       <h2>무엇을, 어디에, 왜</h2>
-      <p>2026년 9월 8일 3개 부처가 공동 발표한 범부처 협업형 원도심 재생 시범사업입니다.</p>
+      <p>2026년 9월 8일 3개 부처가 공동 발표한 범부처 협업형 원도심 재생 시범사업입니다. 지방도시의 인구 유출, 상권 쇠퇴, 도심 공실률 급증에 대응해 부처별로 따로 움직이던 하드웨어 중심 도시재생의 한계를 넘는 협업 모델로 설계됐습니다. 이름 그대로 원도심(CORE)의 기능을 재편(RE)해 청년·문화예술인·로컬 크리에이터가 머물며 자생하는 거점을 만드는 것이 목표입니다.</p>
     </div>
     <div class="grid g3">
       <div class="card">
@@ -246,6 +262,25 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
           <li><b>익산 중앙동</b>: 공실률이 38%에 이르러 공모 대비 중. 빈 상가를 매입·장기임차해 청년 작업실·팝업스토어로 전환하는 구상</li>
           <li><b>순천 원도심</b>: 빈 점포를 청년 ‘실험점포’로 여는 사업 추진</li>
         </ul>
+      </div>
+    </div>
+    <h3 style="margin:40px 0 6px">공모 대상 요건</h3>
+    <p class="muted small" style="margin:0 0 16px">2026.11 기준 정리안입니다. <span class="badge v">보도 확인</span>은 정부 발표를 옮긴 기사로 확인된 내용, <span class="badge u">공고 확인 필요</span>는 가이드라인·공고문으로 최종 확인해야 하는 내용입니다.</p>
+    <div class="req">
+      <div class="card">
+        <span class="tag ac">공간적 범위</span><span class="badge v">보도 확인</span>
+        <h3>도심·부도심 + 쇠퇴 요건</h3>
+        <p class="muted small">「도시·군기본계획」상 도심·부도심에 해당하면서, 「도시재생법」상 쇠퇴 요건(인구 감소, 사업체 수 감소, 노후 건축물 비율 등)을 충족하는 지역.</p>
+      </div>
+      <div class="card">
+        <span class="tag ac">공실 요건</span><span class="badge u">공고 확인 필요</span>
+        <h3>1년 이상 장기공실 10호 이상</h3>
+        <p class="muted small">한곳에 모인 1년 이상 장기 공실상가를 최소 10호 이상 확보하고 소유자 동의서를 첨부하는 등, 바로 착수할 수 있다는 실행력을 증빙.</p>
+      </div>
+      <div class="card">
+        <span class="tag ac">사전 컨설팅</span><span class="badge u">공고 확인 필요</span>
+        <h3>공모 전 4회 이수 (필수)</h3>
+        <p class="muted small">부처 간 사업계획 정합성을 위해 HUG(주택도시보증공사) 주관 복합재생 컨설팅 3회 + 문체부 문화콘텐츠 컨설팅 1회.</p>
       </div>
     </div>
     <p class="note">언론 보도마다 지원 금액이 다르게 나옵니다(국비 최대 210억 / 242.4억, 총사업비 300억 / 365억 등). 210억은 국토부 몫만, 242.4억은 문체부 몫을 더한 국비 합계입니다. 이 사이트는 정부 보도자료를 옮긴 기사 기준 수치를 썼으며, 최종 금액은 공모 공고문으로 확인해야 합니다.</p>
@@ -321,17 +356,21 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
     <div class="grid g2">
       <div class="tl">
         <div class="it"><div class="d">2026. 9. 8</div><div class="t">국토부·문체부·중기부, 원도심 RE:CORE 시범사업 공동 발표</div></div>
-        <div class="it"><div class="d">2026. 9. 9</div><div class="t">사업 가이드라인 공개 (도시재생종합정보체계 누리집)</div></div>
+        <div class="it"><div class="d">2026. 9. 9</div><div class="t">지자체 가이드라인 공개 (도시재생종합정보체계 누리집)</div></div>
         <div class="it"><div class="d">2026. 9. 17</div><div class="t">지자체 대상 사전 사업설명회</div></div>
-        <div class="it f"><div class="d">2026 하반기</div><div class="t">정부 예산안 확정 후 대상지 선정 절차 착수</div></div>
-        <div class="it f"><div class="d">2027. 1 (예상)</div><div class="t">공모 (익산시 보도 기준, 공식 공고일은 미확정)</div></div>
-        <div class="it f"><div class="d">2027</div><div class="t">권역별 1–2곳 선정, 시범사업 착수 (4년 지원)</div></div>
-        <div class="it f"><div class="d">~2029</div><div class="t">권역별 2–3곳으로 확대</div></div>
+        <div class="it f"><div class="d">2026. 9 – 12</div><div class="t">필수 사전 컨설팅 진행 (HUG 복합재생 3회 + 문체부 문화콘텐츠 1회) <span class="badge u">확인 필요</span></div></div>
+        <div class="it f"><div class="d">2026. 12</div><div class="t">시범사업 공모 공식 공고 (정부 예산안 확정 이후) <span class="badge u">확인 필요</span></div></div>
+        <div class="it f"><div class="d">2027. 1</div><div class="t">사업계획서 접수 (보도: “내년 1월 중 공모 신청”)</div></div>
+        <div class="it f"><div class="d">2027. 2</div><div class="t">서면·현장·발표 평가, 시범사업지 최종 선정 (4극3특 권역별, 약 7개소) <span class="badge u">확인 필요</span></div></div>
+        <div class="it f"><div class="d">2027. 3 ~</div><div class="t">공실상가 매입·리모델링 선착수, 사업 본격 가동 (4년 지원)</div></div>
+        <div class="it f"><div class="d">~2029</div><div class="t">권역별 2–3곳으로 단계적 확대</div></div>
       </div>
       <div class="card">
         <h3>지금 지자체가 할 일</h3>
         <ul class="clean muted small">
           <li>원도심 공실 현황 전수조사: 필지·건물·소유자·공실 기간·임대료</li>
+          <li>1년 이상 장기공실 10호 이상을 한 골목·블록 단위로 묶고 소유자 동의서 확보</li>
+          <li>사전 컨설팅(HUG·문체부) 일정 확인 후 이수 계획 수립</li>
           <li>매입·장기임차가 가능한 공실 상가 묶음과 유휴 공공시설 후보지 확보</li>
           <li>운영 주체(도시재생회사·마을관리협동조합·로컬 기업 등) 지정 또는 설립 준비</li>
           <li>문화도시·상권활성화·전통시장 등 기존 사업과 연계 구조 정리</li>
@@ -348,7 +387,7 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
     <div class="sec-head">
       <span class="sec-num">04 — 일본 사례</span>
       <h2>일본은 셔터 상점가를 어떻게 다시 열었나</h2>
-      <p>일본은 1998년 「중심시가지활성화법」 제정 이후 30년 가까이 원도심 공동화와 씨름해 왔습니다. RE:CORE의 세 축(공실 상가, 특화거점, 콘텐츠·창업)에 바로 대입할 수 있는 8개 사례를 골랐습니다.</p>
+      <p>일본은 1998년 「중심시가지활성화법」 제정 이후 30년 가까이 원도심 공동화와 씨름해 왔습니다. RE:CORE의 세 축(공실 상가, 특화거점, 콘텐츠·창업)에 바로 대입할 수 있는 9개 사례를 골랐습니다. 사례마다 참고 영상이 있으면 함께 달았습니다.</p>
     </div>
     <div class="filters" role="group" aria-label="사례 필터">
       <button data-f="all" aria-pressed="true">전체</button>
@@ -356,6 +395,7 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
       <button data-f="ppp" aria-pressed="false">공공부지·민관협력</button>
       <button data-f="org" aria-pressed="false">운영 주체 모델</button>
       <button data-f="culture" aria-pressed="false">문화·관광 콘텐츠</button>
+      <button data-f="talent" aria-pressed="false">청년·인재 유치</button>
     </div>
     <div class="cases" id="cases">
 
@@ -364,10 +404,12 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
         <p class="hook">보조금 없는 민간 소규모 리노베이션을 좁은 구역에 연쇄적으로 일으켰다</p>
         <dl>
           <dt>방식</dt><dd>2010년 시가 ‘고쿠라 야모리(家守) 구상’ 수립. 민간 ‘야모리 회사’가 빈 건물주와 창업자를 연결하고 건물을 통째로 빌려 재임대(서브리스)합니다. ‘리노베이션 스쿨’을 열어 실제 빈 건물 사업계획을 짜고 사업자를 길러냈습니다.</dd>
-          <dt>성과</dt><dd>2011년 6월 첫 프로젝트 개업 뒤 작은 구역에 리노베이션이 몰리며 우오마치 긴텐가이와 뒷골목 통행량이 늘었고, 활기가 돌아온 뒤 임대료가 크게 올랐습니다. 리노베이션 스쿨은 이후 일본 전역으로 퍼진 ‘리노베이션 마치즈쿠리’의 원형이 됐습니다.</dd>
+          <dt>대표 프로젝트</dt><dd><b>메르카토 산반가이</b>(2011.6): 오래된 빈 빌딩을 고쳐 개성 있는 10개 점포가 입점한 1호 프로젝트. <b>나카야 빌딩</b>: 빈 층을 청년 창업 공간 ‘포르무 산반가이’·‘포폴라토 산반가이’로, 1층을 큰길과 뒷골목을 잇는 통과형 미니 상점가 ‘비코로 산반가이’로 바꿨습니다. 이후 ㈜기타큐슈 야모리샤가 우오마치 일대에 사업을 집중했습니다.</dd>
+          <dt>성과</dt><dd>작은 구역에 리노베이션이 몰리며 우오마치 긴텐가이와 뒷골목 통행량이 늘었고, 활기가 돌아온 뒤 임대료가 크게 올랐습니다. 리노베이션 스쿨은 이후 일본 전역으로 퍼진 ‘리노베이션 마치즈쿠리’의 원형이 됐습니다.</dd>
         </dl>
         <div class="lesson"><b>RE:CORE 적용</b> — 활성화상가를 공공이 직접 운영하기보다 민간 운영사가 서브리스하는 구조로 설계하고, 사업 초기에 ‘리노베이션 스쿨’형 창업자 발굴 프로그램을 넣습니다.</div>
-        <div class="src">출처: <a href="https://www.mlit.go.jp/toshi/townscape/content/001913939.pdf" target="_blank" rel="noopener">국토교통성</a> · <a href="https://www.chusho.meti.go.jp/keiei/sapoin/monozukuri300sha/shoutengai30/2014/S26.pdf" target="_blank" rel="noopener">중소기업청</a></div>
+        <a class="video" href="https://www.youtube.com/watch?v=LeVOSvBzMag" target="_blank" rel="noopener"><span class="pl">▶</span><span>【リノベ祭り 2016 春】ぼくらのリノベーションまちづくり — 嶋田洋平<small>리노베이션 스쿨을 이끈 시마다 요헤이의 강연. 빈 점포를 지역 자산과 연결해 사업으로 정착시키는 방법</small></span></a>
+        <div class="src">출처: <a href="https://www.mlit.go.jp/toshi/townscape/content/001913939.pdf" target="_blank" rel="noopener">국토교통성</a> · <a href="https://www.chusho.meti.go.jp/keiei/sapoin/monozukuri300sha/shoutengai30/2014/S26.pdf" target="_blank" rel="noopener">중소기업청</a> · <a href="https://data-max.co.jp/article/14267" target="_blank" rel="noopener">Data Max</a></div>
       </article>
 
       <article class="card case" data-k="vacancy org">
@@ -375,9 +417,11 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
         <p class="hook">토지 소유와 이용을 분리해, 상점가 전체를 하나의 쇼핑몰처럼 운영한다</p>
         <dl>
           <dt>방식</dt><dd>1988년 세토대교 개통 뒤 대형 자본이 들어오며 매출과 방문객이 급감. 상점가 진흥조합이 <b>정기차지권(기한부 토지임차)</b>으로 토지 소유와 이용을 분리하고, 상점가를 A–G 7개 블록으로 나눠 재개발했습니다. 마치즈쿠리(마을만들기) 회사가 지주들과 개별 계약해 땅을 모으고 테넌트 구성·운영을 맡습니다.</dd>
+          <dt>공간 구성</dt><dd>저층부(1–2층)는 상업·음식점·광장, 상층부는 도심형 주거·클리닉 등을 넣어 원도심 상주인구를 되살리는 복합 구조. 상점가 전체를 백화점처럼 통합 MD·공동 마케팅으로 운영합니다.</dd>
           <dt>성과</dt><dd>2006년 A블록 준공 뒤 통행량이 약 2배로 늘었습니다. 지대·임대료가 운영회사 실적에 연동돼 매년 바뀌므로 지주도 위험을 함께 집니다.</dd>
         </dl>
         <div class="lesson"><b>RE:CORE 적용</b> — 흩어진 공실 상가를 ‘매입’만으로 모으기는 어렵습니다. 장기임차와 매출 연동 임대료로 건물주를 사업 파트너로 끌어들이는 계약 모델을 함께 설계합니다.</div>
+        <a class="video" href="https://www.youtube.com/watch?v=5BtSbrgEBgw" target="_blank" rel="noopener"><span class="pl">▶</span><span>【日本一の商店街】元々の店を廃業して成功した「丸亀町商店街」<small>상인들이 토지 권리를 일원화해 교외 쇼핑몰과의 경쟁에서 역전한 개발 구조</small></span></a>
         <div class="src">출처: <a href="https://www.chisou.go.jp/tiiki/chukatu/jirei/takamatsu.pdf" target="_blank" rel="noopener">내각부 지방창생추진사무국</a> · <a href="https://www.jri.co.jp/page.jsp?id=6906" target="_blank" rel="noopener">일본종합연구소</a></div>
       </article>
 
@@ -426,15 +470,17 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
         <div class="src">출처: <a href="https://www.meti.go.jp/policy/sme_chiiki/town_planning/machigenki/column/06_tamura.pdf" target="_blank" rel="noopener">경제산업성 마치겐키</a> · <a href="https://www.chiginkyo.or.jp/pdf/kominka33daishi20170705.pdf" target="_blank" rel="noopener">지방은행협회</a></div>
       </article>
 
-      <article class="card case" data-k="vacancy org">
-        <div class="top"><div><div class="city">히로시마현 오노미치시</div><h3>오노미치 빈집 재생 프로젝트</h3><div class="jp-name">尾道空き家再生プロジェクト</div></div><div class="num">07</div></div>
-        <p class="hook">멈춰 있던 행정의 빈집 뱅크를 NPO가 살려냈다</p>
+      <article class="card case" data-k="vacancy org culture">
+        <div class="top"><div><div class="city">히로시마현 오노미치시</div><h3>ONOMICHI U2 &amp; 빈집 재생</h3><div class="jp-name">ONOMICHI U2 · 尾道空き家再生プロジェクト</div></div><div class="num">07</div></div>
+        <p class="hook">자전거라는 킬러 콘텐츠로 해운 창고를 깨우고, 언덕 골목 빈집으로 번졌다</p>
         <dl>
+          <dt>앵커 거점 · ONOMICHI U2</dt><dd>1943년에 지은 현영(県営) 해운 창고 ‘우와야 2호’를 고쳐 2014년 3월 개장한 복합시설. 자전거를 걸어둘 수 있는 28실 사이클리스트 호텔 ‘HOTEL CYCLE’, 레스토랑·베이커리·카페·바, 로컬 편집숍, 자전거 숍을 한 건물에 넣었습니다. 시마나미 해도(세토내해 자전거길) 출발점이라는 입지를 콘텐츠로 바꿔 해외 사이클리스트를 불러들였습니다.</dd>
           <dt>방식</dt><dd>시의 빈집 뱅크가 2007년 6월 마지막 성약 이후 등록 물건이 없어 멈춘 상태. 2007년 활동을 시작한 NPO가 2009년부터 시와 협동해 빈집 뱅크를 운영합니다. 시는 등록 심사·절차를, NPO는 물건 정보 제공과 이용 희망자 상담·지원을 맡는 역할 분담입니다.</dd>
           <dt>성과</dt><dd>NPO가 직접 손댄 빈집이 100채 가까이 됩니다(2016년 무렵 NPO 자체 집계). 경사지 골목의 오래된 집을 게스트하우스·카페·공방으로 바꿔 이주자와 창업자를 불러들였습니다.</dd>
         </dl>
-        <div class="lesson"><b>RE:CORE 적용</b> — 행정은 심사·계약, 민간은 홍보·상담·사후관리로 나누는 협동 구조. 지자체 공실 DB를 만들어도 현장 매칭 조직이 없으면 작동하지 않습니다.</div>
-        <div class="src">출처: <a href="https://www.mlit.go.jp/common/000998358.pdf" target="_blank" rel="noopener">국토교통성</a> · <a href="https://camp-fire.jp/projects/3881/activities/12110" target="_blank" rel="noopener">NPO CAMPFIRE</a></div>
+        <div class="lesson"><b>RE:CORE 적용</b> — 지역 자원(자전거길)에서 뽑은 콘텐츠 하나를 특화거점의 정체성으로 삼고, 빈 점포 매칭은 행정(심사·계약)과 민간(홍보·상담·사후관리)이 나눠 맡습니다. 공실 DB만으로는 작동하지 않고 현장 매칭 조직이 필요합니다.</div>
+        <a class="video" href="https://www.youtube.com/watch?v=TDrUGso40b4" target="_blank" rel="noopener"><span class="pl">▶</span><span>トークイベント／尾道式 空き家再生術 (2023.11.12)<small>빈집을 청년 창작자 거점으로 바꿔 온 실제 과정과 커뮤니티 정착 모델</small></span></a>
+        <div class="src">출처: <a href="https://onomichi-u2.com/en/about/" target="_blank" rel="noopener">ONOMICHI U2</a> · <a href="https://www.mlit.go.jp/tagengo-db/common/001554812.pdf" target="_blank" rel="noopener">국토교통성</a> · <a href="https://www.mlit.go.jp/common/000998358.pdf" target="_blank" rel="noopener">국토교통성(빈집뱅크)</a> · <a href="https://camp-fire.jp/projects/3881/activities/12110" target="_blank" rel="noopener">NPO CAMPFIRE</a></div>
       </article>
 
       <article class="card case" data-k="ppp culture">
@@ -448,7 +494,20 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
         <div class="src">출처: <a href="https://www8.cao.go.jp/kourei/whitepaper/w-2019/zenbun/pdf/1s3s_08.pdf" target="_blank" rel="noopener">내각부 고령사회백서</a> · <a href="https://www.city.toyama.lg.jp/_res/projects/default_project/_page_/001/014/393/houkoku.pdf" target="_blank" rel="noopener">도야마시</a></div>
       </article>
 
+      <article class="card case" data-k="talent ppp">
+        <div class="top"><div><div class="city">도쿠시마현 가미야마정</div><h3>가미야마 위성 오피스</h3><div class="jp-name">神山町 サテライトオフィス</div></div><div class="num">09</div></div>
+        <p class="hook">산골 빈집 + 초고속 통신망으로 도쿄 IT 기업과 청년을 불러들였다</p>
+        <dl>
+          <dt>방식</dt><dd>도쿠시마현이 현 전역에 광통신망을 깔아 둔 기반 위에서, NPO 그린밸리가 빈집을 IT 기업 위성 오피스·코워킹 공간으로 중개했습니다. 2010년 10월 Sansan ‘가미야마 랩’이 1호로 들어왔습니다. 일자리를 가진 사람을 먼저 유치하는 ‘워크 인 레지던스’ 방식이 특징입니다.</dd>
+          <dt>성과</dt><dd>16개 사 안팎이 사무실을 열었고, 2011년 1970년 이후 처음으로 전입이 전출을 넘었습니다(4년간 64세대 102명 이주, 총무성 자료).</dd>
+        </dl>
+        <div class="lesson"><b>RE:CORE 적용</b> — 원도심 공실을 상점으로만 채우려 하지 말고, 위성 오피스·공유 오피스로 ‘낮 시간 상주 인구’를 만들면 주변 음식점·소매가 따라옵니다. 수도권 기업 유치와 연계할 수 있습니다.</div>
+        <a class="video" href="https://www.youtube.com/watch?v=jrAimKjYaE4" target="_blank" rel="noopener"><span class="pl">▶</span><span>가미야마정 위성 오피스 참고 영상<small>IT 위성 오피스와 청년 정주 사례</small></span></a>
+        <div class="src">출처: <a href="https://www.soumu.go.jp/main_content/000336906.pdf" target="_blank" rel="noopener">총무성</a> · <a href="https://www.soumu.go.jp/main_sosiki/joho_tsusin/top/local_support/ict/jirei/2017_073.html" target="_blank" rel="noopener">총무성 ICT 사례</a> · <a href="https://forbesjapan.com/articles/detail/6093" target="_blank" rel="noopener">Forbes Japan</a></div>
+      </article>
+
     </div>
+    <p class="note">고쿠라의 ‘옛 의료원 건물(밀란다 빌딩) 공유오피스 전환’, ‘공실률 0% 달성’은 처음 받은 정리 자료에 있었지만 공개 자료로 확인하지 못해 사이트에서는 뺐습니다. 다카마쓰는 토지 ‘신탁’이 아니라 정기차지권(기한부 토지임차) 방식입니다.</p>
     <p class="note">사례 수치는 대부분 일본 정부·지자체·당사자 측 자료에 근거하며, 시점이 2006–2020년대로 다양합니다. 제3자 검증이 필요한 수치(임대료 상승, 통행량 등)는 원문을 함께 확인하세요.</p>
   </div>
 </section>
@@ -471,8 +530,9 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
           <tr><td>나가하마 구로카베</td><td>제3섹터</td><td>매입·보존</td><td><span class="dot o"></span></td><td><span class="dot n"></span></td><td><span class="dot"></span></td><td><span class="dot o"></span></td></tr>
           <tr><td>나고야 엔돈지</td><td>상점가+외부 건축가</td><td>빈 점포 매칭</td><td><span class="dot"></span></td><td><span class="dot n"></span></td><td><span class="dot"></span></td><td><span class="dot"></span></td></tr>
           <tr><td>니가타 누타리 테라스</td><td>민간 회사</td><td>일괄 양수</td><td><span class="dot"></span></td><td><span class="dot n"></span></td><td><span class="dot o"></span></td><td><span class="dot"></span></td></tr>
-          <tr><td>오노미치 빈집</td><td>NPO+시</td><td>빈집 뱅크 매칭</td><td><span class="dot o"></span></td><td><span class="dot n"></span></td><td><span class="dot o"></span></td><td><span class="dot"></span></td></tr>
+          <tr><td>오노미치 U2·빈집</td><td>민간 회사 / NPO+시</td><td>현 창고 임차 · 빈집 뱅크</td><td><span class="dot o"></span></td><td><span class="dot"></span></td><td><span class="dot"></span></td><td><span class="dot"></span></td></tr>
           <tr><td>도야마 콤팩트시티</td><td>시(공공 주도)</td><td>공공 정비</td><td><span class="dot n"></span></td><td><span class="dot"></span></td><td><span class="dot"></span></td><td><span class="dot n"></span></td></tr>
+          <tr><td>가미야마 위성 오피스</td><td>NPO 그린밸리</td><td>빈집 중개</td><td><span class="dot o"></span></td><td><span class="dot n"></span></td><td><span class="dot o"></span></td><td><span class="dot"></span></td></tr>
         </tbody>
       </table>
     </div>
@@ -484,9 +544,15 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
   <div class="wrap">
     <div class="sec-head">
       <span class="sec-num">06 — 시사점</span>
-      <h2>RE:CORE 설계에 가져올 7가지</h2>
-      <p>여덟 사례에 공통으로 나타나는 성공 조건입니다.</p>
+      <h2>준비 지자체를 위한 3대 핵심과 7가지 원칙</h2>
+      <p>아홉 사례에 공통으로 나타나는 성공 조건입니다.</p>
     </div>
+    <div class="core3">
+      <div class="card"><div class="k">1</div><h3>플레이어 먼저, 설계는 나중에</h3><p>건물을 다 지은 뒤 입주자를 모으는 하향식을 피하고, 기획 단계부터 공간을 운영할 앵커 크리에이터·로컬 스타트업을 파트너로 참여시켜 맞춤 설계합니다.</p></div>
+      <div class="card"><div class="k">2</div><h3>점이 아니라 선·면으로</h3><p>‘장기공실 10호 이상’ 요건을 흩어진 점포로 채우지 말고 특정 골목 구간 전체를 묶어, 보행 동선과 통일된 상권 브랜드를 만들어야 집객 효과가 생깁니다.</p></div>
+      <div class="card"><div class="k">3</div><h3>착공 전 SW 실증</h3><p>공사 전에 공실 상가에서 팝업 스토어·문화 페스티벌·로컬 마켓을 먼저 운영해 유동 인구와 수요 데이터를 확인하고, 그 결과를 하드웨어 설계에 반영합니다.</p></div>
+    </div>
+    <h3 style="margin:0 0 16px">일본 사례에서 뽑은 7가지 원칙</h3>
     <div class="lessons">
       <div class="card"><h3>운영 주체가 먼저다</h3><p class="muted small">모든 사례에 건물을 모으고 테넌트를 고르고 매일 관리하는 ‘마치즈쿠리 회사’ 같은 상설 조직이 있었습니다. 사업비 4년이 끝난 뒤에도 남을 운영사를 공모 단계에서 지정해야 합니다.</p><div class="from"><span class="tag jp">고쿠라</span><span class="tag jp">다카마쓰</span><span class="tag jp">누타리</span></div></div>
       <div class="card"><h3>소유와 이용을 분리한다</h3><p class="muted small">정기차지권·서브리스·장기임차로 건물주를 내보내지 않고 사업에 참여시킵니다. 매입은 핵심 거점에만, 나머지는 장기임차로 넓게 확보하는 편이 예산 효율이 높습니다.</p><div class="from"><span class="tag jp">다카마쓰</span><span class="tag jp">오갈</span><span class="tag jp">고쿠라</span></div></div>
@@ -508,7 +574,7 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
       <p>일본 사례를 RE:CORE 4년 사업 기간에 맞춰 재구성한 안입니다.</p>
     </div>
     <div class="flow">
-      <div class="step"><div class="s">STEP 1 · 0–6개월</div><h4>진단과 운영사 세팅</h4><p>공실 전수조사, 집중 블록 선정, 운영 주체 설립·지정, 건물주 협의체 구성. 리노베이션 스쿨형 워크숍으로 창업 후보 발굴.</p></div>
+      <div class="step"><div class="s">STEP 1 · 0–6개월</div><h4>진단과 운영사 세팅</h4><p>공실 전수조사, 장기공실 10호 이상 집중 블록 선정·동의서 확보, 운영 주체 지정, 사전 컨설팅 이수. 팝업·로컬 마켓으로 수요 실증.</p></div>
       <div class="step"><div class="s">STEP 2 · 6–18개월</div><h4>1호 거점과 첫 점포</h4><p>상징 건물 1곳을 특화거점으로 먼저 개장하고, 활성화상가 첫 묶음을 서브리스로 오픈. 대표콘텐츠 첫 시즌 운영.</p></div>
       <div class="step"><div class="s">STEP 3 · 18–36개월</div><h4>블록 단위 연쇄 확산</h4><p>빈 점포 은행으로 주변 건물주 매칭, 장기임차 확대, 보행 동선·광장 정비. 임대료 지원 단계적 축소 시작.</p></div>
       <div class="step"><div class="s">STEP 4 · 36–48개월</div><h4>자립과 출구</h4><p>운영사가 임대·관리 수익으로 자립, 매출 연동 임대 구조 정착, 성과 지표(공실률·통행량·창업 생존율) 공개.</p></div>
@@ -526,8 +592,11 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
           <li><input type="checkbox" id="c6"><label for="c6">대표콘텐츠 테마 1개 선정과 연중 운영 계획</label></li>
           <li><input type="checkbox" id="c7"><label for="c7">문화도시·상권활성화·전통시장 사업 연계 구조 정리</label></li>
           <li><input type="checkbox" id="c8"><label for="c8">임대료 지원 단계적 축소 계획과 자립 지표 설정</label></li>
+          <li><input type="checkbox" id="c9"><label for="c9">1년 이상 장기공실 10호 이상 + 소유자 동의서 확보</label></li>
+          <li><input type="checkbox" id="c10"><label for="c10">HUG 복합재생 3회 + 문체부 문화콘텐츠 1회 사전 컨설팅 이수</label></li>
+          <li><input type="checkbox" id="c11"><label for="c11">착공 전 팝업·마켓 운영으로 유동 인구·수요 데이터 확보</label></li>
         </ul>
-        <p class="progress" id="progress">0 / 8 완료</p>
+        <p class="progress" id="progress">0 / 11 완료</p>
       </div>
       <div class="card">
         <h3>성과 지표 예시</h3>
@@ -565,6 +634,8 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
       <li><a href="https://r114.com/trends/wiki/commercial/3db4a6fa-284b-80b2-bbc2-ec60b196bd31" target="_blank" rel="noopener">부동산114 — 공실 상가 살리는 2027 원도심 리코어 프로젝트</a></li>
       <li><a href="https://www.wikitree.co.kr/articles/1167982" target="_blank" rel="noopener">위키트리 — 익산 중앙동 원도심</a></li>
       <li><a href="https://news.mtn.co.kr/news-detail/2026092716294543673" target="_blank" rel="noopener">머니투데이방송 — 순천 원도심 청년 실험점포</a></li>
+      <li><a href="https://www.khan.co.kr/article/202609081502021" target="_blank" rel="noopener">경향신문 — 지방 원도심 상가 공실·모텔이 문화예술·창업 거점으로</a></li>
+      <li><a href="https://www.m-i.kr/news/articleView.html?idxno=1417290" target="_blank" rel="noopener">매일일보 — ‘리:코어’ 실효성은</a></li>
     </ul>
     <h3 style="margin-top:24px">일본 사례</h3>
     <ul class="sources">
@@ -585,6 +656,18 @@ footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
       <li><a href="https://www8.cao.go.jp/kourei/whitepaper/w-2019/zenbun/pdf/1s3s_08.pdf" target="_blank" rel="noopener">内閣府 高齢社会白書 — 富山市</a></li>
       <li><a href="https://www.city.toyama.lg.jp/_res/projects/default_project/_page_/001/014/393/houkoku.pdf" target="_blank" rel="noopener">富山市 — 中心市街地活性化 보고</a></li>
       <li><a href="https://www.mlit.go.jp/toshi/pdf/yorii.pdf" target="_blank" rel="noopener">国土交通省 — まちづくり会社 사례</a></li>
+      <li><a href="https://data-max.co.jp/article/14267" target="_blank" rel="noopener">Data Max — 小倉 中屋ビル・リノベーション</a></li>
+      <li><a href="https://onomichi-u2.com/en/about/" target="_blank" rel="noopener">ONOMICHI U2 공식</a></li>
+      <li><a href="https://www.mlit.go.jp/tagengo-db/common/001554812.pdf" target="_blank" rel="noopener">国土交通省 — ONOMICHI U2 해설</a></li>
+      <li><a href="https://www.soumu.go.jp/main_content/000336906.pdf" target="_blank" rel="noopener">総務省 — 神山町 サテライトオフィス</a></li>
+      <li><a href="https://forbesjapan.com/articles/detail/6093" target="_blank" rel="noopener">Forbes Japan — 神山町</a></li>
+    </ul>
+    <h3 style="margin-top:24px">참고 영상</h3>
+    <ul class="sources">
+      <li><a href="https://www.youtube.com/watch?v=LeVOSvBzMag" target="_blank" rel="noopener">リノベ祭り 2016 春 — 嶋田洋平 (고쿠라)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=5BtSbrgEBgw" target="_blank" rel="noopener">日本一の商店街 丸亀町商店街 (다카마쓰)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=TDrUGso40b4" target="_blank" rel="noopener">尾道式 空き家再生術 (오노미치)</a></li>
+      <li><a href="https://www.youtube.com/watch?v=jrAimKjYaE4" target="_blank" rel="noopener">가미야마정 위성 오피스</a></li>
     </ul>
   </div>
 </section>
