@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>원도심 RE:CORE</title>
+<meta name="description" content="원도심 리코어(RE:CORE) 프로젝트 개요와 참고할 수 있는 일본 원도심·상점가 재생 사례 8선">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f3ee; --surface:#ffffff; --surface-2:#efeae2; --ink:#1d1b18; --ink-2:#55504a; --ink-3:#8a837b;
+  --line:#ddd5ca; --accent:#c8452c; --accent-ink:#ffffff; --accent-soft:#f6ddd5;
+  --kr:#2e5aa8; --kr-soft:#dfe7f5; --jp:#b0303f; --jp-soft:#f5dde0; --ok:#2f7a4f;
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141311; --surface:#1d1b18; --surface-2:#262320; --ink:#f1ece5; --ink-2:#bdb5aa; --ink-3:#857d73;
+    --line:#35312c; --accent:#ef6a4f; --accent-ink:#1a0f0b; --accent-soft:#3a221b;
+    --kr:#7fa4e8; --kr-soft:#1d2840; --jp:#ea7482; --jp-soft:#3a1d22; --ok:#6cc08e;
+    --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141311; --surface:#1d1b18; --surface-2:#262320; --ink:#f1ece5; --ink-2:#bdb5aa; --ink-3:#857d73;
+  --line:#35312c; --accent:#ef6a4f; --accent-ink:#1a0f0b; --accent-soft:#3a221b;
+  --kr:#7fa4e8; --kr-soft:#1d2840; --jp:#ea7482; --jp-soft:#3a1d22; --ok:#6cc08e;
+  --shadow:none;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",system-ui,-apple-system,sans-serif;line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
+@media(min-width:720px){.wrap{padding:0 32px}}
+
+/* nav */
+nav.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav.top .wrap{display:flex;align-items:center;gap:20px;height:60px}
+.brand{font-weight:900;letter-spacing:-.02em;text-decoration:none;font-size:18px;white-space:nowrap}
+.brand b{color:var(--accent)}
+.links{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1}
+.links::-webkit-scrollbar{display:none}
+.links a{text-decoration:none;font-size:14px;color:var(--ink-2);padding:6px 10px;border-radius:8px;white-space:nowrap}
+.links a:hover{background:var(--surface-2);color:var(--ink)}
+.theme{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;width:36px;height:36px;cursor:pointer;flex:none;font-size:16px}
+
+/* hero */
+header.hero{padding:72px 0 56px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--accent);text-transform:uppercase;margin-bottom:16px}
+h1{font-family:"Noto Serif KR",serif;font-size:clamp(38px,8vw,84px);line-height:1.08;letter-spacing:-.03em;margin:0 0 20px;font-weight:900}
+h1 .re{color:var(--accent)}
+.lede{font-size:clamp(17px,2.2vw,21px);color:var(--ink-2);max-width:720px;margin:0 0 36px}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(min-width:820px){.kpis{grid-template-columns:repeat(4,1fr)}}
+.kpi{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;box-shadow:var(--shadow)}
+.kpi .n{font-size:clamp(26px,4vw,36px);font-weight:900;letter-spacing:-.02em;line-height:1.1;font-variant-numeric:tabular-nums}
+.kpi .n small{font-size:.5em;font-weight:700;margin-left:2px}
+.kpi .l{font-size:13px;color:var(--ink-3);margin-top:6px}
+.bigword{position:absolute;right:-20px;top:20px;font-family:"Noto Serif KR",serif;font-weight:900;font-size:260px;line-height:1;color:var(--ink);opacity:.035;pointer-events:none;user-select:none}
+
+/* sections */
+section{padding:72px 0;border-bottom:1px solid var(--line)}
+.sec-head{display:grid;gap:8px;margin-bottom:36px;max-width:760px}
+.sec-num{font-size:13px;font-weight:700;color:var(--accent);letter-spacing:.08em}
+h2{font-family:"Noto Serif KR",serif;font-size:clamp(28px,4.5vw,42px);line-height:1.2;margin:0;letter-spacing:-.02em}
+.sec-head p{margin:0;color:var(--ink-2);font-size:17px}
+h3{font-size:19px;margin:0 0 8px;letter-spacing:-.01em}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:16px}
+@media(min-width:760px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+.muted{color:var(--ink-2)}
+.small{font-size:14px}
+.tag{display:inline-block;font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;background:var(--surface-2);color:var(--ink-2);margin:0 4px 4px 0}
+.tag.kr{background:var(--kr-soft);color:var(--kr)}
+.tag.jp{background:var(--jp-soft);color:var(--jp)}
+.tag.ac{background:var(--accent-soft);color:var(--accent)}
+ul.clean{margin:0;padding-left:1.1em}
+ul.clean li{margin:4px 0}
+.note{font-size:13px;color:var(--ink-3);margin-top:16px;border-left:3px solid var(--line);padding-left:12px}
+
+/* ministry diagram */
+.ministries{display:grid;gap:16px}
+@media(min-width:860px){.ministries{grid-template-columns:repeat(3,1fr)}}
+.min{border-top:4px solid var(--accent)}
+.min.b{border-top-color:var(--kr)}
+.min.c{border-top-color:var(--ok)}
+.min .role{font-size:13px;font-weight:700;color:var(--ink-3);letter-spacing:.04em;margin-bottom:4px}
+.min .amt{font-size:28px;font-weight:900;margin:8px 0 12px;font-variant-numeric:tabular-nums}
+
+/* budget bar */
+.bar{display:flex;height:44px;border-radius:10px;overflow:hidden;margin:20px 0 10px;gap:2px}
+.bar div{display:flex;align-items:center;padding:0 10px;font-size:13px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden}
+.bar .b1{background:var(--kr);flex:210}
+.bar .b2{background:var(--accent);flex:24}
+.bar .b3{background:var(--ok);flex:8.4}
+.bar .b4{background:var(--ink-3);flex:122.6}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:14px;color:var(--ink-2)}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:middle}
+
+/* timeline */
+.tl{position:relative;padding-left:28px}
+.tl:before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl .it{position:relative;padding:0 0 26px}
+.tl .it:before{content:"";position:absolute;left:-26px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
+.tl .it.f:before{border-color:var(--ink-3);border-style:dashed}
+.tl .d{font-weight:900;font-variant-numeric:tabular-nums}
+.tl .t{color:var(--ink-2)}
+
+/* cases */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.filters button{font:inherit;font-size:14px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);padding:7px 14px;border-radius:999px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.cases{display:grid;gap:16px}
+@media(min-width:860px){.cases{grid-template-columns:1fr 1fr}}
+.case{display:flex;flex-direction:column}
+.case .top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:10px}
+.case .city{font-size:13px;color:var(--ink-3);font-weight:700;letter-spacing:.03em}
+.case h3{font-size:21px;margin:2px 0 0}
+.case .jp-name{font-size:13px;color:var(--ink-3)}
+.case .num{font-family:"Noto Serif KR",serif;font-weight:900;font-size:34px;color:var(--jp);opacity:.9;line-height:1}
+.case .hook{font-weight:700;margin:6px 0 14px;font-size:16px}
+.case dl{margin:0;display:grid;gap:10px}
+.case dt{font-size:12px;font-weight:700;color:var(--ink-3);letter-spacing:.06em}
+.case dd{margin:2px 0 0;font-size:15px}
+.case .lesson{margin-top:16px;padding:14px 16px;border-radius:12px;background:var(--accent-soft);font-size:15px}
+.case .lesson b{color:var(--accent)}
+.case .src{margin-top:12px;font-size:12px;color:var(--ink-3)}
+.case .src a{color:var(--ink-3)}
+.case[hidden]{display:none}
+
+/* table */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:14px}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--surface-2);font-size:13px;color:var(--ink-2);font-weight:700;position:sticky;top:0}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:700;white-space:nowrap}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.dot.o{background:transparent;border:2px solid var(--accent)}
+.dot.n{background:var(--line)}
+
+/* lessons */
+.lessons{counter-reset:l;display:grid;gap:14px}
+@media(min-width:760px){.lessons{grid-template-columns:1fr 1fr}}
+.lessons .card{position:relative;padding-left:72px}
+.lessons .card:before{counter-increment:l;content:counter(l,decimal-leading-zero);position:absolute;left:22px;top:20px;font-family:"Noto Serif KR",serif;font-weight:900;font-size:28px;color:var(--accent)}
+.lessons .card .from{margin-top:10px}
+
+/* model */
+.flow{display:grid;gap:12px}
+@media(min-width:900px){.flow{grid-template-columns:repeat(4,1fr)}}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;position:relative}
+.step .s{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.08em}
+.step h4{margin:4px 0 8px;font-size:17px}
+.step p{margin:0;font-size:14px;color:var(--ink-2)}
+.check{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.check li{display:flex;gap:10px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.check input{margin-top:5px;accent-color:var(--accent);width:16px;height:16px;flex:none}
+.check label{cursor:pointer}
+.progress{font-size:14px;color:var(--ink-2);margin:12px 0 0}
+
+/* sources */
+.sources{columns:1;font-size:14px}
+@media(min-width:760px){.sources{columns:2;column-gap:32px}}
+.sources li{break-inside:avoid;margin:0 0 8px}
+.sources a{color:var(--ink-2)}
+footer{padding:40px 0 60px;color:var(--ink-3);font-size:13px}
+</style>
+</head>
+<body>
+
+<nav class="top" aria-label="주요 섹션">
+  <div class="wrap">
+    <a class="brand" href="#top"><b>RE</b>:CORE</a>
+    <div class="links">
+      <a href="#overview">사업 개요</a>
+      <a href="#structure">추진 구조</a>
+      <a href="#schedule">일정</a>
+      <a href="#japan">일본 사례</a>
+      <a href="#compare">비교</a>
+      <a href="#lessons">시사점</a>
+      <a href="#model">적용 모델</a>
+      <a href="#sources">출처</a>
+    </div>
+    <button class="theme" id="themeBtn" aria-label="라이트/다크 전환">◐</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="bigword" aria-hidden="true">核</div>
+  <div class="wrap">
+    <span class="eyebrow">원도심 거점특화 시범사업 · 2027 착수</span>
+    <h1>비어가는 원도심,<br><span class="re">RE:CORE</span>로 다시 채운다</h1>
+    <p class="lede">국토교통부·문화체육관광부·중소벤처기업부가 함께 추진하는 ‘원도심 리코어(RE:CORE) 프로젝트’. 공실 상가와 유휴 공공시설(공간·HW)에 청년·문화·창업 콘텐츠(SW)를 함께 넣어 지방 원도심의 핵심 기능을 되살리는 사업입니다. 이 사이트는 사업 내용을 정리하고, 같은 문제를 먼저 겪은 일본의 원도심·상점가 재생 사례 8곳에서 설계에 쓸 수 있는 교훈을 뽑았습니다.</p>
+    <div class="kpis">
+      <div class="kpi"><div class="n">242.4<small>억 원</small></div><div class="l">지역당 국비 상한 (4년)</div></div>
+      <div class="kpi"><div class="n">365<small>억 원</small></div><div class="l">지방비 포함 총사업비 상한</div></div>
+      <div class="kpi"><div class="n">1–2<small>곳</small></div><div class="l">비수도권 권역(4극3특)별 우선 선정</div></div>
+      <div class="kpi"><div class="n">2029</div><div class="l">권역별 2–3곳으로 확대 목표</div></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- 1. 개요 -->
+<section id="overview">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">01 — 사업 개요</span>
+      <h2>무엇을, 어디에, 왜</h2>
+      <p>2026년 9월 8일 3개 부처가 공동 발표한 범부처 협업형 원도심 재생 시범사업입니다.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <span class="tag ac">목적</span>
+        <h3>원도심의 ‘핵심(Core)’ 회복</h3>
+        <p class="muted small">공실 상가가 밀집한 지방 원도심에 사람·콘텐츠·창업을 다시 모아 도심 핵심 기능을 되살립니다. 공간만 고치던 기존 도시재생과 달리 공간(HW)과 콘텐츠(SW)를 묶어서 지원합니다.</p>
+      </div>
+      <div class="card">
+        <span class="tag ac">대상지</span>
+        <h3>도시쇠퇴지역 중 도심·부도심</h3>
+        <p class="muted small">「도시재생 활성화 및 지원에 관한 특별법」상 도시쇠퇴지역 가운데 도심 또는 부도심에 해당하고, 공실 상가가 밀집해 재생이 시급한 원도심. 수도권은 제외합니다.</p>
+      </div>
+      <div class="card">
+        <span class="tag ac">핵심 수단</span>
+        <h3>활성화상가 + 특화거점</h3>
+        <p class="muted small">공실 상가를 매입하거나 장기 임대해 <b>원도심 활성화상가</b>로 만들고, 미활용 공공시설·집단 공실상가는 문화예술 거점, 창업보육시설, 로컬브랜드 전시·판매공간 같은 <b>특화거점</b>으로 바꿉니다. 입주 청년·창업자에게는 사업 기간 임대료를 지원합니다.</p>
+      </div>
+    </div>
+    <div class="grid g2" style="margin-top:16px">
+      <div class="card">
+        <h3>가점·우대 요건</h3>
+        <ul class="clean muted small">
+          <li><b>문화도시</b>로 지정됐다가 국비 지원이 끝난 지자체가 참여하면 가점</li>
+          <li>중기부 <b>상권 활성화·전통시장</b> 사업에 참여 중인 지역은 우대</li>
+          <li>주변 상권과 연계한 운영 계획을 중요하게 평가</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>지자체 준비 동향</h3>
+        <ul class="clean muted small">
+          <li><b>익산 중앙동</b>: 공실률이 38%에 이르러 공모 대비 중. 빈 상가를 매입·장기임차해 청년 작업실·팝업스토어로 전환하는 구상</li>
+          <li><b>순천 원도심</b>: 빈 점포를 청년 ‘실험점포’로 여는 사업 추진</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">언론 보도마다 지원 금액이 다르게 나옵니다(국비 최대 210억 / 242.4억, 총사업비 300억 / 365억 등). 210억은 국토부 몫만, 242.4억은 문체부 몫을 더한 국비 합계입니다. 이 사이트는 정부 보도자료를 옮긴 기사 기준 수치를 썼으며, 최종 금액은 공모 공고문으로 확인해야 합니다.</p>
+  </div>
+</section>
+
+<!-- 2. 구조 -->
+<section id="structure">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">02 — 추진 구조</span>
+      <h2>3개 부처, 하나의 거점</h2>
+      <p>국토부가 공간을, 문체부가 콘텐츠를, 중기부가 상권을 맡습니다.</p>
+    </div>
+    <div class="ministries">
+      <div class="card min b">
+        <div class="role">공간 · HW</div>
+        <h3>국토교통부</h3>
+        <div class="amt">최대 210억</div>
+        <ul class="clean muted small">
+          <li>공실 상가 매입·장기임차 → 원도심 활성화상가</li>
+          <li>유휴 공공시설 → 특화거점 조성</li>
+          <li>입주 청년·창업자 임대료 지원</li>
+        </ul>
+      </div>
+      <div class="card min">
+        <div class="role">콘텐츠 · SW</div>
+        <h3>문화체육관광부</h3>
+        <div class="amt">최대 32.4억</div>
+        <ul class="clean muted small">
+          <li>원도심 대표콘텐츠 제작·확산 (24억)</li>
+          <li>문화 활성화 프로그램 (8.4억)</li>
+          <li>문화도시 사업 종료 지역과 연계</li>
+        </ul>
+      </div>
+      <div class="card min c">
+        <div class="role">상권 · 사람</div>
+        <h3>중소벤처기업부</h3>
+        <div class="amt">사업 연계</div>
+        <ul class="clean muted small">
+          <li>지역상권 육성사업 연계</li>
+          <li>전통시장·상권 활성화 사업 참여지 우대</li>
+          <li>창업·로컬크리에이터 지원과 결합</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <h3>지역당 사업비 구성 (최대, 4년)</h3>
+      <div class="bar" role="img" aria-label="국토부 210억, 문체부 대표콘텐츠 24억, 문화활성화 8.4억, 지방비 등 약 122.6억, 합계 365억">
+        <div class="b1">국토부 210억</div>
+        <div class="b2">24</div>
+        <div class="b3"></div>
+        <div class="b4">지방비 등 ≈122.6억</div>
+      </div>
+      <div class="legend">
+        <span><i style="background:var(--kr)"></i>국토부 210억</span>
+        <span><i style="background:var(--accent)"></i>문체부 대표콘텐츠 24억</span>
+        <span><i style="background:var(--ok)"></i>문체부 문화활성화 8.4억</span>
+        <span><i style="background:var(--ink-3)"></i>지방비 매칭 등 (총 365억 − 국비 242.4억)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. 일정 -->
+<section id="schedule">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">03 — 일정</span>
+      <h2>2026 발표에서 2029 확대까지</h2>
+      <p>점선은 예정·추정 일정입니다.</p>
+    </div>
+    <div class="grid g2">
+      <div class="tl">
+        <div class="it"><div class="d">2026. 9. 8</div><div class="t">국토부·문체부·중기부, 원도심 RE:CORE 시범사업 공동 발표</div></div>
+        <div class="it"><div class="d">2026. 9. 9</div><div class="t">사업 가이드라인 공개 (도시재생종합정보체계 누리집)</div></div>
+        <div class="it"><div class="d">2026. 9. 17</div><div class="t">지자체 대상 사전 사업설명회</div></div>
+        <div class="it f"><div class="d">2026 하반기</div><div class="t">정부 예산안 확정 후 대상지 선정 절차 착수</div></div>
+        <div class="it f"><div class="d">2027. 1 (예상)</div><div class="t">공모 (익산시 보도 기준, 공식 공고일은 미확정)</div></div>
+        <div class="it f"><div class="d">2027</div><div class="t">권역별 1–2곳 선정, 시범사업 착수 (4년 지원)</div></div>
+        <div class="it f"><div class="d">~2029</div><div class="t">권역별 2–3곳으로 확대</div></div>
+      </div>
+      <div class="card">
+        <h3>지금 지자체가 할 일</h3>
+        <ul class="clean muted small">
+          <li>원도심 공실 현황 전수조사: 필지·건물·소유자·공실 기간·임대료</li>
+          <li>매입·장기임차가 가능한 공실 상가 묶음과 유휴 공공시설 후보지 확보</li>
+          <li>운영 주체(도시재생회사·마을관리협동조합·로컬 기업 등) 지정 또는 설립 준비</li>
+          <li>문화도시·상권활성화·전통시장 등 기존 사업과 연계 구조 정리</li>
+          <li>앵커 테넌트와 청년 창업 수요 사전 확보 (아래 일본 사례의 공통 성공 조건)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. 일본 사례 -->
+<section id="japan">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">04 — 일본 사례</span>
+      <h2>일본은 셔터 상점가를 어떻게 다시 열었나</h2>
+      <p>일본은 1998년 「중심시가지활성화법」 제정 이후 30년 가까이 원도심 공동화와 씨름해 왔습니다. RE:CORE의 세 축(공실 상가, 특화거점, 콘텐츠·창업)에 바로 대입할 수 있는 8개 사례를 골랐습니다.</p>
+    </div>
+    <div class="filters" role="group" aria-label="사례 필터">
+      <button data-f="all" aria-pressed="true">전체</button>
+      <button data-f="vacancy" aria-pressed="false">공실 상가 재생</button>
+      <button data-f="ppp" aria-pressed="false">공공부지·민관협력</button>
+      <button data-f="org" aria-pressed="false">운영 주체 모델</button>
+      <button data-f="culture" aria-pressed="false">문화·관광 콘텐츠</button>
+    </div>
+    <div class="cases" id="cases">
+
+      <article class="card case" data-k="vacancy org">
+        <div class="top"><div><div class="city">후쿠오카현 기타큐슈시</div><h3>고쿠라 우오마치 리노베이션 마치즈쿠리</h3><div class="jp-name">小倉家守構想 · 魚町銀天街</div></div><div class="num">01</div></div>
+        <p class="hook">보조금 없는 민간 소규모 리노베이션을 좁은 구역에 연쇄적으로 일으켰다</p>
+        <dl>
+          <dt>방식</dt><dd>2010년 시가 ‘고쿠라 야모리(家守) 구상’ 수립. 민간 ‘야모리 회사’가 빈 건물주와 창업자를 연결하고 건물을 통째로 빌려 재임대(서브리스)합니다. ‘리노베이션 스쿨’을 열어 실제 빈 건물 사업계획을 짜고 사업자를 길러냈습니다.</dd>
+          <dt>성과</dt><dd>2011년 6월 첫 프로젝트 개업 뒤 작은 구역에 리노베이션이 몰리며 우오마치 긴텐가이와 뒷골목 통행량이 늘었고, 활기가 돌아온 뒤 임대료가 크게 올랐습니다. 리노베이션 스쿨은 이후 일본 전역으로 퍼진 ‘리노베이션 마치즈쿠리’의 원형이 됐습니다.</dd>
+        </dl>
+        <div class="lesson"><b>RE:CORE 적용</b> — 활성화상가를 공공이 직접 운영하기보다 민간 운영사가 서브리스하는 구조로 설계하고, 사업 초기에 ‘리노베이션 스쿨’형 창업자 발굴 프로그램을 넣습니다.</div>
+        <div class="src">출처: <a href="https://www.mlit.go.jp/toshi/townscape/content/001913939.pdf" target="_blank" rel="noopener">국토교통성</a> · <a href="https://www.chusho.meti.go.jp/keiei/sapoin/monozukuri300sha/shoutengai30/2014/S26.pdf" target="_blank" rel="noopener">중소기업청</a></div>
+      </article>
+
+      <article class="card case" data-k="vacancy org">
+        <div class="top"><div><div class="city">가가와현 다카마쓰시</div><h3>다카마쓰 마루가메마치 상점가</h3><div class="jp-name">高松丸亀町商店街</div></div><div class="num">02</div></div>
+        <p class="hook">토지 소유와 이용을 분리해, 상점가 전체를 하나의 쇼핑몰처럼 운영한다</p>
+        <dl>
+          <dt>방식</dt><dd>1988년 세토대교 개통 뒤 대형 자본이 들어오며 매출과 방문객이 급감. 상점가 진흥조합이 <b>정기차지권(기한부 토지임차)</b>으로 토지 소유와 이용을 분리하고, 상점가를 A–G 7개 블록으로 나눠 재개발했습니다. 마치즈쿠리(마을만들기) 회사가 지주들과 개별 계약해 땅을 모으고 테넌트 구성·운영을 맡습니다.</dd>
+          <dt>성과</dt><dd>2006년 A블록 준공 뒤 통행량이 약 2배로 늘었습니다. 지대·임대료가 운영회사 실적에 연동돼 매년 바뀌므로 지주도 위험을 함께 집니다.</dd>
+        </dl>
+        <div class="lesson"><b>RE:CORE 적용</b> — 흩어진 공실 상가를 ‘매입’만으로 모으기는 어렵습니다. 장기임차와 매출 연동 임대료로 건물주를 사업 파트너로 끌어들이는 계약 모델을 함께 설계합니다.</div>
+        <div class="src">출처: <a href="https://www.chisou.go.jp/tiiki/chukatu/jirei/takamatsu.pdf" target="_blank" rel="noopener">내각부 지방창생추진사무국</a> · <a href="https://www.jri.co.jp/page.jsp?id=6906" target="_blank" rel="noopener">일본종합연구소</a></div>
+      </article>
+
+      <article class="card case" data-k="ppp">
+        <div class="top"><div><div class="city">이와테현 시와정</div><h3>오갈(OGAL) 프로젝트</h3><div class="jp-name">オガールプロジェクト · 紫波町</div></div><div class="num">03</div></div>
+        <p class="hook">테넌트를 100% 먼저 채운 뒤 지었다 — 거꾸로 짜는 공공부지 개발</p>
+        <dl>
+          <dt>방식</dt><dd>역 앞 정(町) 소유지가 계획 동결로 10년 가까이 방치된 상태에서, 2007년 정장의 결단과 민간 키맨이 공민연계(PPP)를 추진. 2009년부터 정 소유지를 <b>사업용 정기차지권</b>으로 민간 회사에 빌려주고, 착공 전에 테넌트를 100% 확보한 뒤 사업 규모를 정했습니다.</dd>
+          <dt>시설</dt><dd>도서관·지역교류센터·육아지원센터(공공)와 산지직판장·의원·음식점·학원·호텔·배구 전용 아레나(민간)를 한 블록에 섞었습니다.</dd>
+          <dt>성과</dt><dd>정이 지대·세금 수입을 얻게 됐고, 주변에 주택이 늘었습니다. ‘소비하지 않아도 오는 사람’을 늘린다는 목표로 도서관을 집객 앵커로 썼습니다.</dd>
+        </dl>
+        <div class="lesson"><b>RE:CORE 적용</b> — 특화거점(유휴 공공시설)은 공공 기능을 앵커로 두고 민간 수익시설을 붙이는 복합 구조로, 입주 수요를 먼저 확인한 뒤 공사 규모를 역산합니다.</div>
+        <div class="src">출처: <a href="https://www.pref.saitama.lg.jp/e1601/gikai-committe/houkoku/l0509.html" target="_blank" rel="noopener">사이타마현의회 시찰보고</a> · <a href="https://www.mlit.go.jp/common/001119423.pdf" target="_blank" rel="noopener">국토교통성</a></div>
+      </article>
+
+      <article class="card case" data-k="culture org">
+        <div class="top"><div><div class="city">시가현 나가하마시</div><h3>구로카베 스퀘어</h3><div class="jp-name">黒壁スクエア · 長浜</div></div><div class="num">04</div></div>
+        <p class="hook">헐릴 뻔한 옛 은행 건물 하나가 연 200만 명이 찾는 거리가 됐다</p>
+        <dl>
+          <dt>방식</dt><dd>메이지 시대에 지어진 옛 은행 건물(‘구로카베 은행’)에 맨션 건설 계획이 서자, 시 직원과 지역 유지가 보존 방안을 찾아 1988년 제3섹터 ㈜구로카베를 설립. 1989년 ‘구로카베 유리관’으로 개장했습니다. ‘유리공예’라는 지역과 무관했던 테마를 골라 일관되게 밀고 나간 것이 특징입니다.</dd>
+          <dt>성과</dt><dd>주변 전통 건물들이 미술관·공방·레스토랑·카페로 잇따라 재생됐고, 방문객은 1995년 100만 명, 2001년 200만 명을 넘었습니다(㈜구로카베 집계).</dd>
+        </dl>
+        <div class="lesson"><b>RE:CORE 적용</b> — 문체부 ‘대표콘텐츠’는 행사 나열이 아니라 하나의 테마로 원도심 정체성을 세우는 데 써야 합니다. 상징 건물 하나를 1호 거점으로 삼는 것도 효과적입니다.</div>
+        <div class="src">출처: <a href="https://www.mlit.go.jp/sogoseisaku/region/kanko100/pdf/052.pdf" target="_blank" rel="noopener">국토교통성 관광지역 사례</a> · <a href="https://www.chusho.meti.go.jp/keiei/sapoin/monozukuri300sha/2017/16nagahama.pdf" target="_blank" rel="noopener">중소기업청</a></div>
+      </article>
+
+      <article class="card case" data-k="vacancy culture">
+        <div class="top"><div><div class="city">아이치현 나고야시</div><h3>엔돈지 상점가</h3><div class="jp-name">円頓寺商店街</div></div><div class="num">05</div></div>
+        <p class="hook">약 10년간 28개 점포가 열고, 문을 닫은 곳은 2곳뿐</p>
+        <dl>
+          <dt>방식</dt><dd>점포 수가 10년 새 절반 가까이 줄었던 상점가. 상점가 출신도, 도시재생 전문가도 아닌 외부 건축가 이치하라 마사토가 들어가 빈 점포 재생과 아케이드 개보수를 이끌었습니다. 지역 청년과 외부 유지가 만든 ‘나고노 다나 뱅크(빈 점포 은행)’가 건물주와 출점 협상을 맡았습니다.</dd>
+          <dt>성과</dt><dd>빈 점포·빈집을 고쳐 연 가게 대부분이 시간이 지나도 영업을 이어갔고, 임대료는 2배 이상 올랐습니다. 2013년 시작한 ‘엔돈지 가을 파리제’가 상점가의 대표 행사로 자리 잡았습니다.</dd>
+        </dl>
+        <div class="lesson"><b>RE:CORE 적용</b> — 건물주 설득·매칭을 전담하는 ‘빈 점포 은행’ 기능을 운영사에 두고, 입점자 선별을 엄격히 해 폐업률을 관리합니다.</div>
+        <div class="src">출처: <a href="https://gendai.media/articles/-/58821" target="_blank" rel="noopener">겐다이 비즈니스</a> · <a href="https://president.jp/articles/-/25963" target="_blank" rel="noopener">프레지던트</a> · <a href="https://www.chusho.meti.go.jp/shogyo/shogyo/jirei/02/pdf02/07.pdf" target="_blank" rel="noopener">중소기업청</a></div>
+      </article>
+
+      <article class="card case" data-k="vacancy org">
+        <div class="top"><div><div class="city">니가타현 니가타시</div><h3>누타리 테라스 상점가</h3><div class="jp-name">沼垂テラス商店街</div></div><div class="num">06</div></div>
+        <p class="hook">반찬가게 한 곳에서 시작해, 셔터 시장 전체를 사들였다</p>
+        <dl>
+          <dt>방식</dt><dd>쇼와 30년대에 생긴 시장 거리가 대형점과 자동차 보급으로 거의 셔터 거리가 된 상태. 2010년 무렵 지역 출신 다무라 히로시가 반찬가게 1곳을 열자 가게가 조금씩 늘었고, 2014년 ㈜테라스오피스를 세워 시장협동조합으로부터 셔터 점포 전부를 넘겨받았습니다.</dd>
+          <dt>성과</dt><dd>2015년 옛 시장 나가야(연립 점포)의 레트로 분위기를 살린 ‘누타리 테라스 상점가’로 재개장. 젊은 창업자들의 새 시장이 됐습니다. 테넌트가 늘수록 경리 등 운영 사무 부담이 커지는 과제도 보고됩니다.</dd>
+        </dl>
+        <div class="lesson"><b>RE:CORE 적용</b> — 한 블록(집단 공실상가)을 한 주체가 일괄 확보하면 업종 구성과 경관을 통제할 수 있습니다. 운영 인력·사무 비용을 사업비에 처음부터 넣어야 합니다.</div>
+        <div class="src">출처: <a href="https://www.meti.go.jp/policy/sme_chiiki/town_planning/machigenki/column/06_tamura.pdf" target="_blank" rel="noopener">경제산업성 마치겐키</a> · <a href="https://www.chiginkyo.or.jp/pdf/kominka33daishi20170705.pdf" target="_blank" rel="noopener">지방은행협회</a></div>
+      </article>
+
+      <article class="card case" data-k="vacancy org">
+        <div class="top"><div><div class="city">히로시마현 오노미치시</div><h3>오노미치 빈집 재생 프로젝트</h3><div class="jp-name">尾道空き家再生プロジェクト</div></div><div class="num">07</div></div>
+        <p class="hook">멈춰 있던 행정의 빈집 뱅크를 NPO가 살려냈다</p>
+        <dl>
+          <dt>방식</dt><dd>시의 빈집 뱅크가 2007년 6월 마지막 성약 이후 등록 물건이 없어 멈춘 상태. 2007년 활동을 시작한 NPO가 2009년부터 시와 협동해 빈집 뱅크를 운영합니다. 시는 등록 심사·절차를, NPO는 물건 정보 제공과 이용 희망자 상담·지원을 맡는 역할 분담입니다.</dd>
+          <dt>성과</dt><dd>NPO가 직접 손댄 빈집이 100채 가까이 됩니다(2016년 무렵 NPO 자체 집계). 경사지 골목의 오래된 집을 게스트하우스·카페·공방으로 바꿔 이주자와 창업자를 불러들였습니다.</dd>
+        </dl>
+        <div class="lesson"><b>RE:CORE 적용</b> — 행정은 심사·계약, 민간은 홍보·상담·사후관리로 나누는 협동 구조. 지자체 공실 DB를 만들어도 현장 매칭 조직이 없으면 작동하지 않습니다.</div>
+        <div class="src">출처: <a href="https://www.mlit.go.jp/common/000998358.pdf" target="_blank" rel="noopener">국토교통성</a> · <a href="https://camp-fire.jp/projects/3881/activities/12110" target="_blank" rel="noopener">NPO CAMPFIRE</a></div>
+      </article>
+
+      <article class="card case" data-k="ppp culture">
+        <div class="top"><div><div class="city">도야마현 도야마시</div><h3>도야마 콤팩트시티와 그랜드플라자</h3><div class="jp-name">富山市 · グランドプラザ</div></div><div class="num">08</div></div>
+        <p class="hook">교통과 광장으로 사람이 원도심에 ‘머물 이유’를 만들었다</p>
+        <dl>
+          <dt>방식</dt><dd>‘공공교통을 축으로 한 콤팩트한 마을 만들기’. 2006년 4월 일본 최초의 본격 LRT인 도야마 라이트레일을 개통하고, 중심시가지에 전천후 유리지붕 광장 ‘그랜드플라자’, 영화관, 음식점 골목 등 활기 거점을 정비했습니다. 2020년 3월 역 남북으로 끊겼던 노면전차를 연결했습니다.</dd>
+          <dt>성과</dt><dd>라이트레일 이용자가 개통 전보다 평일 약 2.1배, 휴일 약 3.3배로 늘었고, 도심 지구는 2008년부터 인구 전입 초과를 유지하고 있습니다.</dd>
+        </dl>
+        <div class="lesson"><b>RE:CORE 적용</b> — 상가 재생만으로는 한계가 있습니다. 특화거점 주변에 광장·보행 동선·대중교통 접근성을 함께 손봐 ‘소비 없이도 머무는 공간’을 만듭니다.</div>
+        <div class="src">출처: <a href="https://www8.cao.go.jp/kourei/whitepaper/w-2019/zenbun/pdf/1s3s_08.pdf" target="_blank" rel="noopener">내각부 고령사회백서</a> · <a href="https://www.city.toyama.lg.jp/_res/projects/default_project/_page_/001/014/393/houkoku.pdf" target="_blank" rel="noopener">도야마시</a></div>
+      </article>
+
+    </div>
+    <p class="note">사례 수치는 대부분 일본 정부·지자체·당사자 측 자료에 근거하며, 시점이 2006–2020년대로 다양합니다. 제3자 검증이 필요한 수치(임대료 상승, 통행량 등)는 원문을 함께 확인하세요.</p>
+  </div>
+</section>
+
+<!-- 5. 비교 -->
+<section id="compare">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">05 — 비교</span>
+      <h2>RE:CORE 요소별로 본 일본 사례</h2>
+      <p><span class="dot"></span> 핵심 요소 &nbsp; <span class="dot o"></span> 일부 활용 &nbsp; <span class="dot n"></span> 해당 적음</p>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>사례</th><th>운영 주체</th><th>공간 확보 방식</th><th>공실 상가</th><th>공공시설 거점</th><th>콘텐츠·행사</th><th>창업 육성</th></tr></thead>
+        <tbody>
+          <tr><td>고쿠라 우오마치</td><td>야모리 회사(민간)</td><td>서브리스</td><td><span class="dot"></span></td><td><span class="dot n"></span></td><td><span class="dot o"></span></td><td><span class="dot"></span></td></tr>
+          <tr><td>다카마쓰 마루가메마치</td><td>마치즈쿠리 회사</td><td>정기차지권</td><td><span class="dot"></span></td><td><span class="dot o"></span></td><td><span class="dot o"></span></td><td><span class="dot n"></span></td></tr>
+          <tr><td>시와 오갈</td><td>PPP 민간회사</td><td>공유지 정기차지권</td><td><span class="dot n"></span></td><td><span class="dot"></span></td><td><span class="dot o"></span></td><td><span class="dot o"></span></td></tr>
+          <tr><td>나가하마 구로카베</td><td>제3섹터</td><td>매입·보존</td><td><span class="dot o"></span></td><td><span class="dot n"></span></td><td><span class="dot"></span></td><td><span class="dot o"></span></td></tr>
+          <tr><td>나고야 엔돈지</td><td>상점가+외부 건축가</td><td>빈 점포 매칭</td><td><span class="dot"></span></td><td><span class="dot n"></span></td><td><span class="dot"></span></td><td><span class="dot"></span></td></tr>
+          <tr><td>니가타 누타리 테라스</td><td>민간 회사</td><td>일괄 양수</td><td><span class="dot"></span></td><td><span class="dot n"></span></td><td><span class="dot o"></span></td><td><span class="dot"></span></td></tr>
+          <tr><td>오노미치 빈집</td><td>NPO+시</td><td>빈집 뱅크 매칭</td><td><span class="dot o"></span></td><td><span class="dot n"></span></td><td><span class="dot o"></span></td><td><span class="dot"></span></td></tr>
+          <tr><td>도야마 콤팩트시티</td><td>시(공공 주도)</td><td>공공 정비</td><td><span class="dot n"></span></td><td><span class="dot"></span></td><td><span class="dot"></span></td><td><span class="dot n"></span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 6. 시사점 -->
+<section id="lessons">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">06 — 시사점</span>
+      <h2>RE:CORE 설계에 가져올 7가지</h2>
+      <p>여덟 사례에 공통으로 나타나는 성공 조건입니다.</p>
+    </div>
+    <div class="lessons">
+      <div class="card"><h3>운영 주체가 먼저다</h3><p class="muted small">모든 사례에 건물을 모으고 테넌트를 고르고 매일 관리하는 ‘마치즈쿠리 회사’ 같은 상설 조직이 있었습니다. 사업비 4년이 끝난 뒤에도 남을 운영사를 공모 단계에서 지정해야 합니다.</p><div class="from"><span class="tag jp">고쿠라</span><span class="tag jp">다카마쓰</span><span class="tag jp">누타리</span></div></div>
+      <div class="card"><h3>소유와 이용을 분리한다</h3><p class="muted small">정기차지권·서브리스·장기임차로 건물주를 내보내지 않고 사업에 참여시킵니다. 매입은 핵심 거점에만, 나머지는 장기임차로 넓게 확보하는 편이 예산 효율이 높습니다.</p><div class="from"><span class="tag jp">다카마쓰</span><span class="tag jp">오갈</span><span class="tag jp">고쿠라</span></div></div>
+      <div class="card"><h3>수요를 먼저, 공사는 나중에</h3><p class="muted small">오갈은 테넌트를 100% 채운 뒤 건물 규모를 정했습니다. 활성화상가·특화거점도 입주 희망자와 앵커를 먼저 확보하고 공간 계획을 역산해야 공실이 되풀이되지 않습니다.</p><div class="from"><span class="tag jp">오갈</span></div></div>
+      <div class="card"><h3>작게, 좁게, 연쇄적으로</h3><p class="muted small">고쿠라와 누타리는 한 곳의 성공을 좁은 구역에 반복해 거리 전체를 바꿨습니다. 365억을 원도심 전역에 흩지 말고 걸어서 5분 안의 블록에 집중하는 편이 효과가 큽니다.</p><div class="from"><span class="tag jp">고쿠라</span><span class="tag jp">누타리</span><span class="tag jp">엔돈지</span></div></div>
+      <div class="card"><h3>임대료 지원에는 출구가 있어야 한다</h3><p class="muted small">고쿠라는 민간 프로젝트에 보조금을 붙이지 않고도 임대료가 오를 만큼 수요를 만들었습니다. RE:CORE 임대료 지원은 단계적으로 줄여 4년 뒤 자립할 수 있는 점포를 골라야 합니다.</p><div class="from"><span class="tag jp">고쿠라</span><span class="tag jp">엔돈지</span></div></div>
+      <div class="card"><h3>하나의 테마로 정체성을 세운다</h3><p class="muted small">구로카베의 유리, 엔돈지의 파리제처럼 반복되는 대표 콘텐츠가 원도심의 브랜드가 됐습니다. 문체부 대표콘텐츠 예산은 일회성 축제보다 연중 운영되는 테마에 씁니다.</p><div class="from"><span class="tag jp">나가하마</span><span class="tag jp">엔돈지</span></div></div>
+      <div class="card"><h3>소비 없이도 오는 이유를 만든다</h3><p class="muted small">도서관(오갈), 유리지붕 광장(도야마)처럼 돈을 쓰지 않아도 머무는 공공 앵커가 유동인구의 바닥을 받칩니다. 특화거점에 공공 기능을 하나 이상 넣는 것이 좋습니다.</p><div class="from"><span class="tag jp">오갈</span><span class="tag jp">도야마</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. 적용 모델 -->
+<section id="model">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">07 — 적용 모델</span>
+      <h2>한국형 RE:CORE 실행 4단계 (제안)</h2>
+      <p>일본 사례를 RE:CORE 4년 사업 기간에 맞춰 재구성한 안입니다.</p>
+    </div>
+    <div class="flow">
+      <div class="step"><div class="s">STEP 1 · 0–6개월</div><h4>진단과 운영사 세팅</h4><p>공실 전수조사, 집중 블록 선정, 운영 주체 설립·지정, 건물주 협의체 구성. 리노베이션 스쿨형 워크숍으로 창업 후보 발굴.</p></div>
+      <div class="step"><div class="s">STEP 2 · 6–18개월</div><h4>1호 거점과 첫 점포</h4><p>상징 건물 1곳을 특화거점으로 먼저 개장하고, 활성화상가 첫 묶음을 서브리스로 오픈. 대표콘텐츠 첫 시즌 운영.</p></div>
+      <div class="step"><div class="s">STEP 3 · 18–36개월</div><h4>블록 단위 연쇄 확산</h4><p>빈 점포 은행으로 주변 건물주 매칭, 장기임차 확대, 보행 동선·광장 정비. 임대료 지원 단계적 축소 시작.</p></div>
+      <div class="step"><div class="s">STEP 4 · 36–48개월</div><h4>자립과 출구</h4><p>운영사가 임대·관리 수익으로 자립, 매출 연동 임대 구조 정착, 성과 지표(공실률·통행량·창업 생존율) 공개.</p></div>
+    </div>
+
+    <div class="grid g2" style="margin-top:28px">
+      <div>
+        <h3>공모 준비 체크리스트</h3>
+        <ul class="check" id="check">
+          <li><input type="checkbox" id="c1"><label for="c1">원도심 공실 상가 전수조사(소유자·공실 기간·임대료) 완료</label></li>
+          <li><input type="checkbox" id="c2"><label for="c2">걸어서 5분 내 집중 블록과 1호 특화거점 후보 확정</label></li>
+          <li><input type="checkbox" id="c3"><label for="c3">사업 종료 후에도 남을 운영 주체 지정</label></li>
+          <li><input type="checkbox" id="c4"><label for="c4">건물주 장기임차·매출 연동 임대 의향 확보</label></li>
+          <li><input type="checkbox" id="c5"><label for="c5">입주 희망 청년·창업자 및 앵커 테넌트 사전 수요 확인</label></li>
+          <li><input type="checkbox" id="c6"><label for="c6">대표콘텐츠 테마 1개 선정과 연중 운영 계획</label></li>
+          <li><input type="checkbox" id="c7"><label for="c7">문화도시·상권활성화·전통시장 사업 연계 구조 정리</label></li>
+          <li><input type="checkbox" id="c8"><label for="c8">임대료 지원 단계적 축소 계획과 자립 지표 설정</label></li>
+        </ul>
+        <p class="progress" id="progress">0 / 8 완료</p>
+      </div>
+      <div class="card">
+        <h3>성과 지표 예시</h3>
+        <ul class="clean muted small">
+          <li><b>공실률</b>: 집중 블록 1층 공실률 (예: 익산 중앙동 38% 기준선)</li>
+          <li><b>보행 통행량</b>: 평일·주말 정점 조사 (다카마쓰·고쿠라 방식)</li>
+          <li><b>창업 생존율</b>: 입점 점포 2년·4년 영업 지속 비율 (엔돈지: 28개 중 26개 유지)</li>
+          <li><b>임대료 수준</b>: 사업 전후 평균 임대료 변화와 지원 의존도</li>
+          <li><b>체류 인구</b>: 공공 앵커 방문자 수, 체류 시간</li>
+          <li><b>민간 후속 투자</b>: 보조금 없이 생긴 리노베이션 건수</li>
+        </ul>
+        <p class="note">임대료 상승은 성공 신호인 동시에 젠트리피케이션 위험입니다. 운영사 보유 공간 일부를 장기 저렴 임대로 묶어두는 장치를 함께 검토하세요.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 출처 -->
+<section id="sources">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">출처</span>
+      <h2>참고 자료</h2>
+      <p>2026년 11월 2일 기준으로 확인한 공개 자료입니다.</p>
+    </div>
+    <h3>RE:CORE 프로젝트</h3>
+    <ul class="sources">
+      <li><a href="https://www.mcst.go.kr/site/s_notice/press/pressView.jsp?pSeq=22699" target="_blank" rel="noopener">문화체육관광부 보도자료</a></li>
+      <li><a href="https://www.djournal.co.kr/news/article.html?no=110804" target="_blank" rel="noopener">외교저널 — 국토부, 문체부·중기부와 거점특화 원도심 RE:CORE 프로젝트 시범사업 추진</a></li>
+      <li><a href="https://www.dwbnews.kr/news/articleView.html?idxno=121190" target="_blank" rel="noopener">장애인복지뉴스 — 리코어 프로젝트 2027년 시범 추진</a></li>
+      <li><a href="https://news.mtn.co.kr/news-detail/2026090809035977339" target="_blank" rel="noopener">머니투데이방송 — 지역당 최대 365억 투입</a></li>
+      <li><a href="https://www.heraldk.com/article/2026090719003545285" target="_blank" rel="noopener">헤럴드 — 비어가는 지방 원도심, 사람과 콘텐츠로 다시 살린다</a></li>
+      <li><a href="https://biz.sbs.co.kr/amp/article/20000333353" target="_blank" rel="noopener">SBS Biz — 지방 원도심 공실상가 살린다</a></li>
+      <li><a href="https://www.dt.co.kr/article/12082678" target="_blank" rel="noopener">디지털타임스 — 범부처 협업형 재생사업</a></li>
+      <li><a href="https://r114.com/trends/wiki/commercial/3db4a6fa-284b-80b2-bbc2-ec60b196bd31" target="_blank" rel="noopener">부동산114 — 공실 상가 살리는 2027 원도심 리코어 프로젝트</a></li>
+      <li><a href="https://www.wikitree.co.kr/articles/1167982" target="_blank" rel="noopener">위키트리 — 익산 중앙동 원도심</a></li>
+      <li><a href="https://news.mtn.co.kr/news-detail/2026092716294543673" target="_blank" rel="noopener">머니투데이방송 — 순천 원도심 청년 실험점포</a></li>
+    </ul>
+    <h3 style="margin-top:24px">일본 사례</h3>
+    <ul class="sources">
+      <li><a href="https://www.mlit.go.jp/toshi/townscape/content/001913939.pdf" target="_blank" rel="noopener">国土交通省 — 小倉家守構想 자료</a></li>
+      <li><a href="https://www.chusho.meti.go.jp/keiei/sapoin/monozukuri300sha/shoutengai30/2014/S26.pdf" target="_blank" rel="noopener">中小企業庁 — 魚町商店街 사례</a></li>
+      <li><a href="https://www.chisou.go.jp/tiiki/chukatu/jirei/takamatsu.pdf" target="_blank" rel="noopener">内閣府 — 高松丸亀町 사례</a></li>
+      <li><a href="https://www.jri.co.jp/page.jsp?id=6906" target="_blank" rel="noopener">日本総合研究所 — 丸亀町商店街</a></li>
+      <li><a href="https://www.pref.saitama.lg.jp/e1601/gikai-committe/houkoku/l0509.html" target="_blank" rel="noopener">埼玉県議会 — オガール 시찰보고</a></li>
+      <li><a href="https://www.mlit.go.jp/common/001119423.pdf" target="_blank" rel="noopener">国土交通省 — 公民連携 사례</a></li>
+      <li><a href="https://www.mlit.go.jp/sogoseisaku/region/kanko100/pdf/052.pdf" target="_blank" rel="noopener">国土交通省 — 長浜 黒壁</a></li>
+      <li><a href="https://www.city.nagahama.lg.jp/cmsfiles/contents/0000000/320/017079-000001.pdf" target="_blank" rel="noopener">長浜市 — 黒壁 방문객 자료</a></li>
+      <li><a href="https://gendai.media/articles/-/58821" target="_blank" rel="noopener">現代ビジネス — 円頓寺商店街</a></li>
+      <li><a href="https://president.jp/articles/-/25963" target="_blank" rel="noopener">PRESIDENT Online — 円頓寺商店街</a></li>
+      <li><a href="https://www.meti.go.jp/policy/sme_chiiki/town_planning/machigenki/column/06_tamura.pdf" target="_blank" rel="noopener">経済産業省 街元気 — 沼垂テラス 田村寛</a></li>
+      <li><a href="https://www.chiginkyo.or.jp/pdf/kominka33daishi20170705.pdf" target="_blank" rel="noopener">地方銀行協会 — 沼垂テラス</a></li>
+      <li><a href="https://www.mlit.go.jp/common/000998358.pdf" target="_blank" rel="noopener">国土交通省 — 尾道 空き家バンク</a></li>
+      <li><a href="https://camp-fire.jp/projects/3881/activities/12110" target="_blank" rel="noopener">尾道空き家再生プロジェクト (CAMPFIRE)</a></li>
+      <li><a href="https://www8.cao.go.jp/kourei/whitepaper/w-2019/zenbun/pdf/1s3s_08.pdf" target="_blank" rel="noopener">内閣府 高齢社会白書 — 富山市</a></li>
+      <li><a href="https://www.city.toyama.lg.jp/_res/projects/default_project/_page_/001/014/393/houkoku.pdf" target="_blank" rel="noopener">富山市 — 中心市街地活性化 보고</a></li>
+      <li><a href="https://www.mlit.go.jp/toshi/pdf/yorii.pdf" target="_blank" rel="noopener">国土交通省 — まちづくり会社 사례</a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">원도심 RE:CORE 리서치 아카이브 · 공개 자료를 바탕으로 정리했으며 공식 사업 안내가 아닙니다. 확정 내용은 국토교통부·문화체육관광부 공고를 확인하세요.</div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  try{var s=localStorage.getItem('recore-theme'); if(s) root.setAttribute('data-theme',s);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    if(!cur){cur=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
+    var next=cur==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('recore-theme',next);}catch(e){}
+  });
+
+  var fbtns=document.querySelectorAll('.filters button'), cases=document.querySelectorAll('.case');
+  fbtns.forEach(function(b){b.addEventListener('click',function(){
+    fbtns.forEach(function(x){x.setAttribute('aria-pressed','false')});
+    b.setAttribute('aria-pressed','true');
+    var f=b.dataset.f;
+    cases.forEach(function(c){c.hidden=!(f==='all'||c.dataset.k.split(' ').indexOf(f)>-1)});
+  })});
+
+  var boxes=document.querySelectorAll('#check input'), prog=document.getElementById('progress');
+  function upd(){var n=0;boxes.forEach(function(b){if(b.checked)n++});prog.textContent=n+' / '+boxes.length+' 완료';
+    try{localStorage.setItem('recore-check',JSON.stringify([].map.call(boxes,function(b){return b.checked})));}catch(e){}}
+  try{var saved=JSON.parse(localStorage.getItem('recore-check')||'[]');boxes.forEach(function(b,i){b.checked=!!saved[i]});}catch(e){}
+  boxes.forEach(function(b){b.addEventListener('change',upd)}); upd();
+})();
+</script>
+</body>
+</html>
